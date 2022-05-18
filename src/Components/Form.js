@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Form = ({ setInputText, todos, setTodos, inputText }) => {
-    const inputTexthandler = (e) => {
+    const inputTextHandler = (e) => {
         console.log(e.target.value);
         setInputText(e.target.value);
 
@@ -16,7 +16,7 @@ const Form = ({ setInputText, todos, setTodos, inputText }) => {
     };
     return (
         <form>
-            <input value={inputText} onClick={inputTexthandler} type="text" className="todo-input" />
+            <input value={inputText} onChange={inputTextHandler} type="text" className="todo-input" />
             <button onClick={submitTodoHandler} className="todo-button" type="submit">
                 <i className="fas fa-plus-square"></i>
             </button>
