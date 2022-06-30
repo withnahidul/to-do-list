@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import Form from './Components/Form';
 import TodoList from './Components/TodoList';
+import { Routes, Route, Link } from "react-router-dom";
 
 function App() {
 
@@ -55,6 +56,11 @@ function App() {
     <div className="App">
       <header>
         <h1>Nis Todo List</h1>
+        <h1>Welcome to React Router!</h1>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="about" element={<About />} />
+        </Routes>
       </header>
       <Form
         inputText={inputText}
