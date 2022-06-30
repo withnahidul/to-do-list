@@ -3,6 +3,9 @@ import './App.css';
 import Form from './Components/Form';
 import TodoList from './Components/TodoList';
 import { Routes, Route, Link } from "react-router-dom";
+import Navbar from './Components/Navbar';
+import Callender from './Components/Callender';
+import Home from './Home';
 
 function App() {
 
@@ -54,13 +57,15 @@ function App() {
   }
   return (
     <div className="App">
+      <Navbar></Navbar>
+      
       <header>
         <h1>Nis Todo List</h1>
-        <h1>Welcome to React Router!</h1>
+     
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="about" element={<About />} />
-        </Routes>
+          <Route path="callender" element={<Callender />} />
+        </Routes> 
       </header>
       <Form
         inputText={inputText}
