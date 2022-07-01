@@ -6,6 +6,8 @@ import { Routes, Route, Link } from "react-router-dom";
 import Navbar from './Components/Navbar';
 import Callender from './Components/Callender';
 import Home from './Home';
+import Footer from './Components/Footer';
+import Login from './Components/Login';
 
 function App() {
 
@@ -56,7 +58,7 @@ function App() {
     }
   }
   return (
-    <div className="App">
+    <div className="App w-full lg:flex-row-reverse ">
       <Navbar></Navbar>
       
       <header>
@@ -79,7 +81,13 @@ function App() {
         filteredTodos={filteredTodos}
         setTodos={setTodos}
         todos={todos}></TodoList>
+      <Login></Login>
+      <Footer></Footer>
     </div>
+
+    
+
+    
   );
 }
 
